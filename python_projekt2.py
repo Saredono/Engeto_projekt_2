@@ -85,12 +85,12 @@ def game():
 
     """Spouští samotnou hru, definovány nové proměnné - pokusy, časomíra """
 
-    
-    attempts = 0 #pokusy
-    program_number = generate_number()
-    starting_time = time.time() #časomíra
-
     while True:
+        attempts = 0 #pokusy
+        program_number = generate_number()
+        starting_time = time.time() #časomíra
+
+        while True:
             attempts += 1
             user_number = get_guess()
             bulls, cows = comparing(user_number, program_number)
